@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng nhập</title>
+    <link rel="stylesheet" href="login.css">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="parent-element ">
+            <img class="pic2" src="img/Nen_Dky 3.png" alt="" style="width: 100%;">
+        </div>
+        <div class="box1" style="position: absolute;">
+            <img class="pic1" src="img/logo.png" alt="" style="height: 174px">
+        </div>
+
+        <div class="box2" style="position: absolute;">
+            <h1>Ăn Vặt Chu Chu</h1>
+        </div>
+
+        <form class="box3" onsubmit="return validate()" style="position: absolute;">
+            <div>
+                <label for="username"></label>
+                <input class="i1" type="text" id="username" name="username"  placeholder="Tên đăng nhập">
+            </div>
+    
+            <div class="error error-username"></div>
+
+            <div style="padding-top: 20px;">
+                <label for="password"></label>
+                <input class="i2" type="password" id="password" name="password" placeholder="Mật khẩu">
+            </div>
+    
+            <div class="error error-password"></div>
+            <div style ="padding-top: 20px; margin-left: 11rem;"> 
+                <button class="but" onclick="login()" >Đăng Nhập</button>
+            </div>
+            <a href="" style="float: right; padding-top: 20px; text-decoration: none; font-size: large;">Quên mật khẩu?</a>
+        </form>
+    </div>
+            <script>
+                function validate() {
+                    const nodeUsername = document.querySelector('#username');
+                    const txtUsername = nodeUsername.value;
+                    const errorNodes = document.querySelectorAll('.error');
+                    errorNodes.forEach((node) => {
+                        node.innerHTML = '';
+                    })
+                    nodeUsername.classList.remove('error-input');
+                    if (txtUsername == "") {
+                        document.querySelector('.error-username').innerText = 'Vui lòng nhập Tên đăng nhập';
+                        nodeUsername.classList.add('error-input');
+                        return false;
+                    }
+
+                    const nodePassword = document.querySelector('#password');
+                    const txtPassword = nodePassword.value;
+                    if (txtPassword == "") {
+                        document.querySelector('.error-password').innerText = 'Vui lòng nhập mật khẩu';
+                        nodePassword.classList.add('error-input');
+                        return false;
+                    }
+                    return true;
+                }
+
+                function login() {
+                    if (validate()) {
+                        const username = document.querySelector('#username').value;
+                        const password = document.querySelector('#password').value;
+                        if (username === "truong" && password === "123") {
+                            window.location.href = "./Admin.html";
+                         console.log("username");
+                        } else {
+                            alert("Thông tin đăng nhập không hợp lệ");
+                        }
+                    }
+                }
+            </script>
+    
+            <style>
+                .error {
+                    color: red;
+                    font-size: 20px;
+                    padding-left: 160px;
+                }
+    
+                .error-input {
+                    border-color: red;
+                }
+            </style>
+
+
+</body>
+</html>

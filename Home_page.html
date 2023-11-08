@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Quản Lý Bán Hàng Ăn Vặt</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <header style="background-color: rgb(209, 212, 206);">
+        <div class="rows" style="width: 50px; display: flex;">
+            <div class="logo col ">
+                <img class="pic1 " src="img/logo.png" alt="Logo" style="height: 80px; margin-left: 1.5rem;margin-top: 10px;">
+            </div>
+    
+            <div class="input-group" style="margin-left: 200px;">
+                <div class="form-outline" style="display: flex;background: white; width: 700px;height: 40px; margin-top: 1.5rem;border-radius: 20px 20px 20px 20px;">
+                  <input style="height: 40px; width: 700px; border: none; margin-left: 1rem;"  type="search" id="form1" class="form-control" placeholder="Nhập từ khóa sản phẫm"/>
+                    <svg style="margin-right: 1.5rem;margin-top: 12px;" xmlns="http://www.w3.org/2000/svg" width="20" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                    </svg>
+                </div>
+            </div>
+            <div class="icons" style="display: flex;margin-left: 800px; margin-top: 2rem;"> 
+                <div style="margin-left: 20px;display: flex;">
+                    <div>
+                        <a href="login.html">
+                            <svg xmlns="http://www.w3.org/2000/svg"  style="color: rgba(0, 0, 0, 0.605); " width="25" height="25" fill="currentColor" class="bi bi-person-circle circle-icon" viewBox="0 0 16 16">
+                                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                                <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+                            </svg>
+                        </a>
+                    </div>
+                    <div style="margin-left: 10px;width: 100px;">
+                        <a href="login.html" style="color: black;  text-decoration: none;">Đăng nhập</ah>
+                    </div>
+                </div>     
+            </div>
+        </div>
+        <div class="head2" style="display: flex; justify-content:space-around;padding-right: 120px; margin-top: 0.5rem;background: rgb(135, 180, 75);height: 50px;">
+            <div style="margin-top: 0.5rem;"><a style="text-decoration: none;color: white; font-weight: 700;" href="">Trang chủ</a></div>
+            <div style="margin-top: 0.5rem;"><a style="text-decoration: none;color: white;font-weight: 700;" href="">Tất cả sản phẩm</a></div>
+            <div style="margin-top: 0.5rem;"><a style="text-decoration: none;color: white;font-weight: 700;" href="">Mới ra mắt</=></div>
+            <div style="margin-top: 0.5rem;"><a style="text-decoration: none;color: white;margin-left: -90px;font-weight: 700;" href="">Bán chạy</a></div>
+            <div style="margin-top: 0.5rem;"><a style="text-decoration: none;color: white;font-weight: 700;" href="">Giỏ hàng</a></div>
+        </div>
+        <img src="img/intro.webp" alt="" style="width: 100%;">
+    </header>
+    <tbody>
+        <div class="content">
+            <div class="ctent1" style="display: flex; justify-content: space-between;margin-top: 2rem;">
+                <div class="hanghoa" style="margin-left: 5rem;display: flex;">
+                    <div class="item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-box-seam-fill" viewBox="0 0 16 16" style="color: #8ECA72;">
+                            <path fill-rule="evenodd" d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.01-.003.268-.108a.75.75 0 0 1 .558 0l.269.108.01.003 6.97 2.789ZM10.404 2 4.25 4.461 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339L8 5.961 5.596 5l6.154-2.461L10.404 2Z"/>
+                        </svg>
+                    </div>
+                    <div class="text" style="margin-left: 1rem;">
+                        <h2 style="color: #8ECA72;">Hàng hóa</h2>
+                        <p style="color: rgba(0, 0, 0, 0.573);">luôn luôn tươi ngon</p>
+                    </div>
+                </div>
+                <div class="giaohang" style="display: flex;" >
+                    <div class="item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-truck-front-fill" viewBox="0 0 16 16" style="color: #8ECA72;">
+                            <path d="M3.5 0A2.5 2.5 0 0 0 1 2.5v9c0 .818.393 1.544 1 2v2a.5.5 0 0 0 .5.5h2a.5.5 0 0 0 .5-.5V14h6v1.5a.5.5 0 0 0 .5.5h2a.5.5 0 0 0 .5-.5v-2c.607-.456 1-1.182 1-2v-9A2.5 2.5 0 0 0 12.5 0h-9ZM3 3a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v3.9c0 .625-.562 1.092-1.17.994C10.925 7.747 9.208 7.5 8 7.5c-1.208 0-2.925.247-3.83.394A1.008 1.008 0 0 1 3 6.9V3Zm1 9a1 1 0 1 1 0-2 1 1 0 0 1 0 2Zm8 0a1 1 0 1 1 0-2 1 1 0 0 1 0 2Zm-5-2h2a1 1 0 1 1 0 2H7a1 1 0 1 1 0-2Z"/>
+                        </svg>
+                    </div>
+                    <div class="text" style="margin-left: 1rem;">
+                        <h2 style="color: #8ECA72;">Giao hàng</h2>
+                        <p style="color: rgba(0, 0, 0, 0.573);">Nhanh chóng, tiết kiệm</p>
+                    </div>
+                </div>
+                <div class="tuvan" style="margin-left: 2rem;display: flex;">
+                    <div class="item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-people-fill" viewBox="0 0 16 16" style="color: #8ECA72;">
+                            <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7Zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm-5.784 6A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216ZM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"/>
+                        </svg>
+                    </div>
+                    <div class="text">
+                        <h2 style="color: #8ECA72;">Tư vấn</h2>
+                        <p style="color: rgba(0, 0, 0, 0.573);">Chu đáo, tận tâm</p>
+                    </div>
+                </div>    
+                <div class="thucpham" style="margin-right: 4rem;display: flex;" >
+                    <div class="item">          
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" style="color: #8ECA72;">
+                            <path fill="currentColor" d="M18.06 23h1.66c.84 0 1.53-.65 1.63-1.47L23 5.05h-5V1h-1.97v4.05h-4.97l.3 2.34c1.71.47 3.31 1.32 4.27 2.26c1.44 1.42 2.43 2.89 2.43 5.29V23M1 22v-1h15.03v1c0 .54-.45 1-1.03 1H2c-.55 0-1-.46-1-1m15.03-7C16.03 7 1 7 1 15h15.03M1 17h15v2H1v-2Z"/></svg>
+                    </div>
+                    <div class="text" style="margin-left: 1rem;">
+                        <h2 style="color: #8ECA72;">Thực phẩm</h2>
+                        <p style="color: rgba(0, 0, 0, 0.573);">Vệ sinh an toàn</p>
+                    </div>
+                </div>
+            </div>
+            <div class="ctent2">
+                <div class="tieude">
+                    <div class="dssp" style="display: flex; margin-left: 2rem;margin-top: 2rem;">
+                        <svg style="color: #8ECA72;" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24">
+                            <path fill="currentColor" d="M18 3a1 1 0 0 1 .993.883L19 4v16a1 1 0 0 1-1.993.117L17 20v-5h-1a1 1 0 0 1-.993-.883L15 14V8c0-2.21 1.5-5 3-5Zm-6 0a1 1 0 0 1 .993.883L13 4v5a4.002 4.002 0 0 1-3 3.874V20a1 1 0 0 1-1.993.117L8 20v-7.126a4.002 4.002 0 0 1-2.995-3.668L5 9V4a1 1 0 0 1 1.993-.117L7 4v5a2 2 0 0 0 1 1.732V4a1 1 0 0 1 1.993-.117L10 4l.001 6.732a2 2 0 0 0 .992-1.563L11 9V4a1 1 0 0 1 1-1Z"/>
+                        </svg>
+                        <h4>Danh sách sản phẩm</h4>
+                    </div>
+                </div>
+
+                <div class="noidung" style="margin-top: 2rem;">
+                    <div class="picF">
+                        <div class="row1" style="display: flex;justify-content: space-between;margin-left: 2rem; margin-right: 2rem;">
+                            <div class="item1">
+                                <div class="card" style="width: 18rem;">
+                                    <img src="img/0qu9bi68xhxz5vubjcrey8z3ba7z.webp" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                      <h5 class="card-title">Bánh tráng dẻo me cay</h5>
+                                      <p class="card-text">99.000 đ</p>
+                                      <a href="#" class="btn btn-primary">Mua</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item1">
+                                <div class="card" style="width: 18rem;">
+                                    <img src="img/7rlvq504075sajdritxdvejwp3aa.webp" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                      <h5 class="card-title">Bánh xà lam nguyệt quế</h5>
+                                      <p class="card-text">90.000 đ</p>
+                                      <a href="#" class="btn btn-primary">Mua</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item1">
+                                <div class="card" style="width: 18rem;">
+                                    <img src="img/7y3h6ij7k7105gy26cv9f7gd3kue.webp" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                      <h5 class="card-title">Bánh in sầu riêng</h5>
+                                      <p class="card-text">125.000 đ</p>
+                                      <a href="#" class="btn btn-primary">Mua</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item1">
+                                <div class="card" style="width: 18rem;">
+                                    <img src="img/8debv8dfitr5m1cgbg82i1twzp8s.webp" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                      <h5 class="card-title">Khóm mic tắc dừa</h5>
+                                      <p class="card-text">100.000 đ</p>
+                                      <a href="#" class="btn btn-primary">Mua</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row2" style="display: flex;justify-content: space-between; margin-top: 2rem; margin-left: 2rem; margin-right: 2rem;">
+                            <div class="item1">
+                                <div class="card" style="width: 18rem;">
+                                    <img src="img/57rlyxiq4q0n7ak9mdpq6pwffr5e.webp" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                      <h5 class="card-title">Khế rim muối ớt</h5>
+                                      <p class="card-text">88.000 đ</p>
+                                      <a href="#" class="btn btn-primary">Mua</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item1">
+                                <div class="card" style="width: 18rem;">
+                                    <img src="img/683tjtohhhmtywp1u39v2yyqdc4v.webp" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                      <h5 class="card-title">Mẵng cầu muối ớt</h5>
+                                      <p class="card-text">45.000 đ</p>
+                                      <a href="#" class="btn btn-primary">Mua</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item1">
+                                <div class="card" style="width: 18rem;">
+                                    <img src="img/985fq2ztjm8edfybyukgt5iyhk97.webp" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                      <h5 class="card-title">Mẵng cầu xí muội</h5>
+                                      <p class="card-text">50.000 đ</p>
+                                      <a href="#" class="btn btn-primary">Mua</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item1">
+                                <div class="card" style="width: 18rem;">
+                                    <img src="img/bkft5cc5wwf3xcrz8y6fyxu4s8zg.webp" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                      <h5 class="card-title">Mẵng cầu xí muội</h5>
+                                      <p class="card-text">60.000 đ</p>
+                                      <a href="#" class="btn btn-primary">Mua</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row3" style="display: flex; justify-content: space-between;margin-top: 2rem; margin-left: 2rem; margin-right: 2rem;">
+                            <div class="item1">
+                                <div class="card" style="width: 18rem;">
+                                    <img src="img/d8o7xf3a7a9pen0t7iwutc56fsu5.webp" class="card-img-top" alt="..." >
+                                    <div class="card-body">
+                                      <h5 class="card-title">Mẵng cầu me không hạt</h5>
+                                      <p class="card-text">210.000 đ</p>
+                                      <a href="#" class="btn btn-primary">Mua</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item1">
+                                <div class="card" style="width: 18rem;">
+                                    <img src="img/guk1xeb2k4k11armuywkg5k3okcn.webp" class="card-img-top" alt="..." height="286">
+                                    <div class="card-body">
+                                      <h5 class="card-title">Mứt mãng cầu xí muội</h5>
+                                      <p class="card-text">230.000 đ</p>
+                                      <a href="#" class="btn btn-primary">Mua</a>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                            <div class="item1">
+                                <div class="card" style="width: 18rem;">
+                                    <img src="img/hbpzhn9wxsrug4skm8j9zog957zk.webp" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                      <h5 class="card-title">Bánh dừa chén nướng</h5>
+                                      <p class="card-text">215.000 đ</p>
+                                      <a href="#" class="btn btn-primary">Mua</a>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                            <div class="item1">
+                                <div class="card" style="width: 18rem;">
+                                    <img src="img/kim8x6alvbiahuccat38t7tqaxpw.webp" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                      <h5 class="card-title">Bắp bò rim cay</h5>
+                                      <p class="card-text">200.000 đ</p>
+                                      <a href="#" class="btn btn-primary">Mua</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer" style="margin-top: 2rem;">
+                <div class="t" style="width: 100%; height: 400px; background-color: #3C804A;display: flex;">
+                    <div class="t1">
+                        <img src="img/logo.png" alt="" style="width: 100px;height: 100px;margin-top: 2rem; margin-left: 2rem;">
+                        <div class="t1.1" style="margin-left: 50px;">
+                            <h2 style="color: white;">Chu Chu Shop</h2>
+                            <p style="color: white; margin-bottom: 10px; margin-top: 10px;">Hotline: 0974 74 74 10</p>
+                            <p style="color: white;">Địa chỉ:54/19A Đông Đen, phường 14, quận Đống Đa Hà Nội</p>
+                        </div>
+                    </div>
+    
+                    <div class="t2" style="margin-top: 8rem;margin-left: 5rem;">
+                        <h2 style="color: white;">Truy cập nhanh</h2>
+                        <p style="color: white; margin-bottom: 10px; margin-top: 10px;">Sản phẩm bán chạy</p>
+                        <p style="color: white; margin-bottom: 10px; margin-top: 10px;">Sản phẩm mới ra mắt</p>
+                        <p style="color: white;">Giỏ hàng</p>
+                    </div>
+                    <div class="t2" style="margin-top: 8.2rem;margin-left: 5rem;">
+                        <h2 style="color: white;">Theo dõi trang Facebook của chúng tôi</h2>
+                        <p style="color: white;">https://www.facebook.com/ShopChuChu</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </tbody>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+</html>

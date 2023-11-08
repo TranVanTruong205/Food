@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Quản Lý Bán Hàng Ăn Vặt</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm bg-white navbar-dark shadow">
+            <div class="container-fluid">
+                <div class="d-flex align-items-center">
+                    <a class="navbar-brand" href="" style="margin-left: 15px;">
+                        <img src="https://res.cloudinary.com/aloha-dao/image/upload/7t0i9q26xv7mcovgm5vqr65fduup.png"
+                            alt="ChuChushop" width="40" height="40" class="d-inline-block align-text-top mr-2">
+                    </a>
+                    <h5 class="m-0 text-dark" style="opacity: 0.8;">Chuchu Shop</h5>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                        class="bi bi-justify " viewBox="0 0 16 16" style="margin-left: 2rem;">
+                        <path fill-rule="evenodd"
+                            d="M2 12.5a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z" />
+                    </svg>
+                    <h6 classs="m-0 text-dark" style="margin-left: 2rem;margin-top: 7px; opacity: 0.8;">My shop | Ngàn
+                        đơn cuối năm</h6>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <tbody>
+        <div class="d-flex custom-flex-class">
+            <!-- Thanh menu dọc trái-->
+            <div style="background-color:#00365A;width: 245px;height: 700px">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-14 ml-0">
+                            <div class="nav flex-column nav-pills " id="v-pills-tab" role="tablist"
+                                aria-orientation="vertical">
+                                <div class="d-flex custom-flex-class mt-1">
+                                    <a>
+                                        <img src="img/370257331_866851728470563_3411843888616292055_n (1).png"
+                                            alt="ChuChushop" width="40" height="40"
+                                            class="d-inline-block align-text-top " style="opacity: 0.7;">
+                                    </a>
+                                    <a class="nav-link text-white" id="v-pills-Don_hang-tab" data-toggle="pill"
+                                        href="#v-pills-home" role="tab" aria-controls="v-pills-home"
+                                        aria-selected="true" width="50" height="70">Đơn hàng</a>
+                                </div>
+                                <div class="d-flex custom-flex-class mt-2">
+                                    <a>
+                                        <img src="img/368314838_884523116421783_2005769975528050395_n.png"
+                                            alt="ChuChushop" width="40" height="40"
+                                            class="d-inline-block align-text-top ">
+                                    </a>
+                                    <a class="nav-link text-white" id="v-pills-Xuat_kho-tab" data-toggle="pill"
+                                        href="#v-pills-profile" role="tab" aria-controls="v-pills-profile"
+                                        aria-selected="false">Xuất kho</a>
+
+                                </div>
+                                <div class="d-flex custom-flex-class mt-2">
+                                    <a>
+                                        <img src="img/368468095_316082414521888_3763208370231646843_n.png"
+                                            alt="ChuChushop" width="40" height="40"
+                                            class="d-inline-block align-text-top mr-2">
+                                    </a>
+                                    <a class="nav-link text-white" id="v-pills-Nhap_kho-tab" data-toggle="pill"
+                                        href="#v-pills-profile" role="tab" aria-controls="v-pills-profile"
+                                        aria-selected="false">Nhập kho</a>
+
+                                </div>
+                                <div class="d-flex custom-flex-class mt-2">
+                                    <a>
+                                        <img src="img/386458348_1362946381302726_727141473620504985_n.png"
+                                            alt="ChuChushop" width="40" height="40"
+                                            class="d-inline-block align-text-top mr-2">
+                                    </a>
+                                    <a class="nav-link text-white" id="v-pills-Danh_muc-tab" data-toggle="pill"
+                                        href="category.html" role="tab" aria-controls="v-pills-messages"
+                                        aria-selected="false">Danh mục sản phẩm</a>
+
+                                </div>
+                                <div class="d-flex custom-flex-class mt-2 bg-primary">
+                                    <a class="mt-2">
+                                        <img src="img/377150777_1006514687236968_2959042751233141045_n.png"
+                                            alt="ChuChushop" width="40" height="40"
+                                            class="d-inline-block align-text-top mr-2">
+                                    </a>
+                                    <a class="nav-link text-white" id="v-pills-Danh_sach-tab" data-toggle="pill"
+                                        href="Admin.html" role="tab" aria-controls="v-pills-settings"
+                                        aria-selected="false">Danh sách sản phẩm</a>
+
+                                </div>
+                                <div class="d-flex custom-flex-class mt-2">
+                                    <a>
+                                        <img src="img/376601319_6767718013335436_1624345327125467783_n.png"
+                                            alt="ChuChushop" width="40" height="40"
+                                            class="d-inline-block align-text-top mr-2">
+                                    </a>
+                                    <a class="nav-link text-white" id="v-pills-Ton_kho-tab" data-toggle="pill"
+                                        href="#v-pills-profile" role="tab" aria-controls="v-pills-profile"
+                                        aria-selected="false">Quản lí tồn kho</a>
+
+                                </div>
+                                <div class="d-flex custom-flex-class mt-2">
+                                    <a>
+                                        <img src="img/377149951_272263561947894_7477465037240108793_n.png"
+                                            alt="ChuChushop" width="40" height="40"
+                                            class="d-inline-block align-text-top mr-2">
+                                    </a>
+                                    <a class="nav-link text-white" id="v-pills-Kho_hang-tab" data-toggle="pill"
+                                        href="#v-pills-messages" role="tab" aria-controls="v-pills-messages"
+                                        aria-selected="false">Kho hàng</a>
+
+                                </div>
+                                <div class="d-flex custom-flex-class mt-2">
+                                    <a>
+                                        <img src="img/370200485_1409922553238187_7171885684126323695_n.png"
+                                            alt="ChuChushop" width="40" height="40"
+                                            class="d-inline-block align-text-top mr-2">
+                                    </a>
+                                    <a class="nav-link text-white" id="v-pills-Khuyen_mai-tab" data-toggle="pill"
+                                        href="#v-pills-settings" role="tab" aria-controls="v-pills-settings"
+                                        aria-selected="false">Chiến dịch khuyến mãi</a>
+
+                                </div>
+                                <div class="d-flex custom-flex-class mt-2">
+                                    <a>
+                                        <img src="img/371435074_741280461153718_3894754688848740335_n.png"
+                                            alt="ChuChushop" width="40" height="40"
+                                            class="d-inline-block align-text-top mr-2">
+                                    </a>
+                                    <a class="nav-link text-white" id="v-pills-Khach_hang-tab" data-toggle="pill"
+                                        href="#v-pills-messages" role="tab" aria-controls="v-pills-messages"
+                                        aria-selected="false">Khách hàng</a>
+
+                                </div>
+                                <div class="d-flex custom-flex-class mt-2">
+                                    <a>
+                                        <img src="img/353693718_363056526157976_1273413313895831532_n.png"
+                                            alt="ChuChushop" width="40" height="40"
+                                            class="d-inline-block align-text-top mr-2">
+                                    </a>
+                                    <a class="nav-link text-white" id="v-pills-Bao_cao-tab" data-toggle="pill"
+                                        href="#v-pills-settings" role="tab" aria-controls="v-pills-settings"
+                                        aria-selected="false">Báo cáo</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- phần bên phải  -->
+            <div class="container">
+                <div class="container-search ">
+                    <div class="row mt-5">
+                        <div class="col">
+                            <input type="text" class="form-control" placeholder="Mã đơn hàng" aria-label="Mã đơn hàng">
+                        </div>
+                        <div class="col">
+                            <input type="text" class="form-control" placeholder="Tên khách hàng"
+                                aria-label="Tên khách hàng">
+                        </div>
+                        <div class="input-group col">
+
+                            <button class="bg-primary text-white"
+                                style="display: flex; border: none; width: 160px;border-radius: 3px;height: 40px;justify-content: space-around;align-items:center;">
+                                <div class="mr-3">Tìm kiếm</div> <i class="bi bi-search"></i>
+                            </button>
+
+                        </div>
+                        <div class="col">
+                            <select class="form-select text-center" aria-label="Default select example">
+                                <option selected>Tìm kiếm nâng cao</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="row " style="margin-top: 5rem;margin-left: 5rem;">
+                    <div class="col">
+                        <h5>Danh sách sản phẫm</h5>
+                    </div>
+                    <div class="col" style="margin-left: 25rem;">
+                        <button type="button" class="btn btn-primary" data-bs-target="#myModal"
+                            data-bs-toggle="modal">Thêm sản phẩm</button>
+                    </div>
+                    <!-- form thêm sản phẫm -->
+                    <div class="modal fade" id="myModal" tabindex="-1" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content" style="width: 700px; height: 600px;">
+                                <div class="modal-header" style="height: 40px;">
+                                    <h6 class="modal-title">Thông tin cơ bản</h6>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="bg-info opacity-75 text-center">
+                                        <label for="imageInput" class="custom-file-upload ">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-images" viewBox="0 0 16 16">
+                                                <path d="M4.502 9a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" />
+                                                <path
+                                                    d="M14.002 13a2 2 0 0 1-2 2h-10a2 2 0 0 1-2-2V5A2 2 0 0 1 2 3a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v8a2 2 0 0 1-1.998 2zM14 2H4a1 1 0 0 0-1 1h9.002a2 2 0 0 1 2 2v7A1 1 0 0 0 15 11V3a1 1 0 0 0-1-1zM2.002 4a1 1 0 0 0-1 1v8l2.646-2.354a.5.5 0 0 1 .63-.062l2.66 1.773 3.71-3.71a.5.5 0 0 1 .577-.094l1.777 1.947V5a1 1 0 0 0-1-1h-10z" />
+                                            </svg> Thêm ảnh
+                                        </label>
+                                        <input type="file" id="imageInput" accept="image/*" style="display: none;">
+                                        <img id="productImage" src="" alt="Hình sản phẩm"
+                                            style="max-width: 300px; display: none;">
+                                    </div>
+                                    <div class="mt-4">
+                                        <label for="validationTextarea" class="form-label">Tên sản phẫm</label>
+                                        <input class="form-control" id="validationTextarea" required></input>
+                                        <div class="invalid-feedback">
+                                            nhập tên sản phẫm
+                                        </div>
+                                    </div>
+                                    <div style="margin-top: 2rem;">
+                                        <form class="row g-3 needs-validation" novalidate>
+                                            <div class="col-md-4">
+                                                <label for="validationCustom01" class="form-label">Mã tự động</label>
+                                                <input type="text" class="form-control" id="validationCustom01"
+                                                    value="PRD-16273848" required>
+                                                <div class="valid-feedback">
+                                                    Looks good!
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <label for="validationCustom02" class="form-label">Mã sản phẫm</label>
+                                                <input type="text" class="form-control" id="validationCustom02"
+                                                    required>
+                                                <div class="valid-feedback">
+                                                    Looks good!
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <label for="validationCustom03" class="form-label">Nhà sản xuất</label>
+                                                <select class="form-select" id="validationCustom03" required>
+                                                    <option selected disabled value="">Chọn nhà sản xuất</option>
+                                                    <option>...</option>
+                                                </select>
+                                                <div class="invalid-feedback">
+                                                    Please choose a username.
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <label for="validationCustom04" class="form-label">Giá sản phẫm
+                                                    (VNĐ)</label>
+                                                <input type="text" class="form-control" id="validationCustom04"
+                                                    required>
+                                                <div class="invalid-feedback">
+                                                    Please provide a valid city.
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <label for="validationCustom05" class="form-label">Giá gạch
+                                                    (VNĐ)</label>
+                                                <input type="text" class="form-control" id="validationCustom05"
+                                                    required>
+                                                <div class="invalid-feedback">
+                                                    Please provide a valid zip.
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <label for="validationCustom06" class="form-label">Danh mục</label>
+                                                <select class="form-select" id="validationCustom06" required>
+                                                    <option selected disabled value="">Chọn danh mục</option>
+                                                    <option>...</option>
+                                                </select>
+                                                <div class="invalid-feedback">
+                                                    Please select a valid state.
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="mb-3 ">
+                                    <label for="exampleFormControlTextarea1" class="form-label"
+                                        style="margin-left: 1rem;">Example textarea</label>
+                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+                                        style="width: 665px;margin-left: 1rem;"></textarea>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary"
+                                                        id="openSecondModalButton">Lưu lại</button>
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
+                                    <script>
+                                        // Gọi modal thứ hai khi nút "Lưu lại" trong modal thứ nhất được bấm
+                                        document.getElementById('openSecondModalButton').addEventListener('click', function () {
+                                            var secondModal = new bootstrap.Modal(document.getElementById('exampleModal'));
+                                            secondModal.show();
+                                        });
+                                    </script>
+
+                                    <!-- Modal -->
+                                    <!-- Modal thứ hai -->
+                                    <div style="margin-left: 40px;" class="modal fade" id="exampleModal"
+                                        tabindex="-1" aria-labelledby="exampleModalLabel"
+                                        aria-hidden="true">
+
+
+                                        <div class="modal-dialog">
+                                            <div class="modal-content"
+                                                style="height: 400px;width: 600px; margin-top: 7rem;">
+                                                <div
+                                                    style="margin-top: 100px;margin-left:110px;font-size: 50px;color: green;">
+                                                    Thêm thành công !
+                                                </div>
+                                                <div style="margin-top: 50px;margin-left:300px;">
+                                                    <button type="button" class="btn btn-primary"
+                                                        data-bs-dismiss="modal" style="width: 100px;margin-left:-40px;">OK</button>
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="margin-left: -40px;">
+                        <table class="table mt-5">
+                            <thead>
+                                <tr>
+                                    <th>Mã sản phẫm</th>
+                                    <th>Tên sản phẫm</th>
+                                    <th>Nhà sản xuất</th>
+                                    <th>Giá sản phẫm</th>
+                                    <th>Danh mục</th>
+                                    <th>Thao tác</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                            </tbody>
+                        </table>
+                        <div
+                            style="font-weight: 600;border-radius: 5px; display:flex; background-color:#e3e2ff ; width: auto;height: 42px; align-items:center;justify-content: space-around;">
+                            <div style="margin-left: -50px;">PRD-12292 </div>
+                            <div>Bò khô</div>
+                            <div>Công ty X</div>
+                            <div>1000000đ </div>
+                            <div>VIP</div>
+                            <div class="d-flex" style="width: 45px;justify-content: space-around;">
+                                <div>
+
+                                    <div type="button" data-bs-target="#myModal1" data-bs-toggle="modal"><i
+                                            class="bi bi-pencil-fill"></i>
+                                        <div class="col"></div>
+                                    </div>
+                                    <!-- form thêm sản phẫm -->
+                                    <div class="modal fade" id="myModal1" tabindex="-1" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content" style="width: 700px; height: 700px;">
+                                                <div class="modal-header" style="height: 40px;">
+                                                    <h6 class="modal-title">Thông tin cơ bản</h6>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div style="display: flex;">
+                                                        <div>
+                                                            <a>
+                                                                <img src="img/bokho1.jpg" alt="ChuChushop" width="100"
+                                                                    height="100"
+                                                                    class="d-inline-block align-text-top mr-2">
+                                                            </a>
+                                                        </div>
+                                                        <div class="bg-info opacity-75 text-center "
+                                                            style="height: 100px;width: 500px;">
+                                                            <label for="imageInput" class="custom-file-upload ">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                    height="16" fill="currentColor" class="bi bi-images"
+                                                                    viewBox="0 0 16 16">
+                                                                    <path
+                                                                        d="M4.502 9a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" />
+                                                                    <path
+                                                                        d="M14.002 13a2 2 0 0 1-2 2h-10a2 2 0 0 1-2-2V5A2 2 0 0 1 2 3a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v8a2 2 0 0 1-1.998 2zM14 2H4a1 1 0 0 0-1 1h9.002a2 2 0 0 1 2 2v7A1 1 0 0 0 15 11V3a1 1 0 0 0-1-1zM2.002 4a1 1 0 0 0-1 1v8l2.646-2.354a.5.5 0 0 1 .63-.062l2.66 1.773 3.71-3.71a.5.5 0 0 1 .577-.094l1.777 1.947V5a1 1 0 0 0-1-1h-10z" />
+                                                                </svg> Đổi ảnh
+                                                            </label>
+                                                            <input type="file" id="imageInput" accept="image/*"
+                                                                style="display: none;">
+                                                            <img id="productImage" src="" alt="Hình sản phẩm"
+                                                                style="max-width: 300px; display: none;">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="mt-4">
+                                                        <label for="validationTextarea1" class="form-label">Tên sản
+                                                            phẫm</label>
+                                                        <input class="form-control" id="validationTextarea1"
+                                                            value="Bò khô" required></input>
+                                                        <div class="invalid-feedback">
+                                                            nhập tên sản phẫm
+                                                        </div>
+                                                    </div>
+                                                    <div style="margin-top: 2rem;">
+                                                        <form class="row g-3 needs-validation" novalidate>
+                                                            <div class="col-md-4">
+                                                                <label for="validationCustom01" class="form-label">Mã tự
+                                                                    động</label>
+                                                                <input type="text" class="form-control"
+                                                                    id="validationCustom01" value="PRD-16273848"
+                                                                    required>
+                                                                <div class="valid-feedback">
+                                                                    Looks good!
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-4">
+                                                                <label for="validationCustom02" class="form-label">Mã
+                                                                    sản phẫm</label>
+                                                                <input type="text" class="form-control"
+                                                                    id="validationCustom02" value="PRD-12292" required>
+                                                                <div class="valid-feedback">
+                                                                    Looks good!
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-4">
+                                                                <label for="validationCustom03" class="form-label">Nhà
+                                                                    sản xuất</label>
+                                                                <select class="form-select" id="validationCustom03"
+                                                                    required>
+                                                                    <option selected disabled value="">Công ty X
+                                                                    </option>
+                                                                    <option>...</option>
+                                                                </select>
+                                                                <div class="invalid-feedback">
+                                                                    Please choose a username.
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-4">
+                                                                <label for="validationCustom04" class="form-label">Giá
+                                                                    sản phẫm (VNĐ)</label>
+                                                                <input type="text" class="form-control"
+                                                                    id="validationCustom04" value="100000 đ" required>
+                                                                <div class="invalid-feedback">
+                                                                    Please provide a valid city.
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-4">
+                                                                <label for="validationCustom05" class="form-label">Giá
+                                                                    gạch (VNĐ)</label>
+                                                                <input type="text" class="form-control"
+                                                                    id="validationCustom05" value="80000 đ" required>
+                                                                <div class="invalid-feedback">
+                                                                    Please provide a valid zip.
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-4">
+                                                                <label for="validationCustom06" class="form-label">Danh
+                                                                    mục</label>
+                                                                <select class="form-select" id="validationCustom06"
+                                                                    required>
+                                                                    <option selected disabled value="">VIP</option>
+                                                                    <option>...</option>
+                                                                </select>
+                                                                <div class="invalid-feedback">
+                                                                    Please select a valid state.
+                                                                </div>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                                <div class="mb-3 ">
+                                                    <label for="exampleFormControlTextarea1" class="form-label"
+                                                        style="margin-left: 1rem;">Example textarea</label>
+                                                    <textarea class="form-control" id="exampleFormControlTextarea1"
+                                                        rows="2" style="width: 665px;margin-left: 1rem;"></textarea>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-primary"
+                                                        id="openSecondModalButton1">Lưu lại</button>
+                                                    <button type="button" class="btn btn-secondary"
+                                                        data-bs-dismiss="modal">Hủy</button>
+                                                    <!-- Button trigger modal -->
+
+                                                    <script>
+                                                        // Gọi modal thứ hai khi nút "Lưu lại" trong modal thứ nhất được bấm
+                                                        document.getElementById('openSecondModalButton1').addEventListener('click', function () {
+                                                            var secondModal = new bootstrap.Modal(document.getElementById('exampleModal1'));
+                                                            secondModal.show();
+                                                        });
+                                                    </script>
+
+                                                    <!-- Modal -->
+                                                    <!-- Modal thứ hai -->
+                                                    <div style="margin-left: 40px;" class="modal fade" id="exampleModal1"
+                                                        tabindex="-1" aria-labelledby="exampleModalLabel"
+                                                        aria-hidden="true">
+
+
+                                                        <div class="modal-dialog">
+                                                            <div class="modal-content"
+                                                                style="height: 400px;width: 600px;margin-top: 7rem;">
+                                                                <div
+                                                                    style="margin-top: 50px;margin-left:120px;font-size: 50px;color: green;">
+                                                                    Sửa thành công !
+                                                                </div>
+                                                                <div style="margin-top: 50px;margin-left:300px;">
+                                                                    <button type="button" class="btn btn-primary"
+                                                                        data-bs-dismiss="modal" style="width: 100px;margin-left:-40px;margin-top: 2rem;">OK</button>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+
+                                    <div type="button" data-bs-target="#myModal2" data-bs-toggle="modal">
+                                        <i class="bi bi-trash-fill"></i>
+                                        <div class="col"></div>
+                                    </div>
+                                    <!-- form thêm sản phẫm -->
+                                    <div class="modal fade" id="myModal2" tabindex="-1" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content" style="width: 600px; height: 400px;margin-top: 7rem;">
+                                                <div style="margin-top: 80px;margin-left: 110px;font-size: 35px;font-size: 23px;">Bạn có chắc chắn muốn xóa không ?</div>
+                                                <div style="margin-top: 50px;margin-left: 300px;">
+                                                    <button type="button" class="btn btn-primary"
+                                                        id="openThirdModalButton" style="margin-left: -4rem;">Xóa</button>
+                                                    <button type="button" class="btn btn-secondary"
+                                                        data-bs-dismiss="modal"style="margin-left: 1rem;" >Hủy</button>
+                                               
+
+                                                    <!-- Button trigger modal -->
+
+                                                    <script>
+                                                        // Gọi modal thứ ba khi nút "Xóa" trong modal thứ hai được bấm
+                                                        document.getElementById('openThirdModalButton').addEventListener('click', function () {
+                                                            var thirdModal = new bootstrap.Modal(document.getElementById('thirdModal'));
+                                                            thirdModal.show();
+                                                        });
+                                                    </script>
+
+
+                                                    <!-- Modal -->
+                                                    <!-- Modal thứ ba -->
+                                                    <div class="modal fade" id="thirdModal" tabindex="-1"
+                                                        aria-labelledby="thirdModalLabel" aria-hidden="true">
+                                                        <div class="modal-dialog">
+                                                            <div class="modal-content"
+                                                                style="height: 400px;width: 600px; margin-top: 7rem;">
+                                                                <div
+                                                                    style="margin-top: 116px;margin-left: 70px;font-size: 50px;color: red; font-size: 35px;">
+                                                                    Đã xóa sản phẫm thành công!
+                                                                </div>
+                                                                    <button type="button" class="btn btn-primary"
+                                                                    data-bs-dismiss="modal" style="width: 100px;margin-left: 250px;margin-top: 2rem;">OK</button>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <style>
+                .hidden {
+                    display: none;
+                }
+
+                .modal-backdrop {
+                    opacity: 0.5;
+                    background-color: #f5f3f3;
+                }
+
+                .custom-file-upload {
+                    display: inline-block;
+                    padding: 6px 12px;
+                    cursor: pointer;
+                    text-align: center;
+                }
+            </style>
+    </tbody>
+    <script>
+        // Lắng nghe sự kiện khi tệp hình ảnh được chọn
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+        (function () {
+            'use strict'
+
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            var forms = document.querySelectorAll('.needs-validation')
+
+            // Loop over them and prevent submission
+            Array.prototype.slice.call(forms)
+                .forEach(function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (!form.checkValidity()) {
+                            event.preventDefault()
+                            event.stopPropagation()
+                        }
+
+                        form.classList.add('was-validated')
+                    }, false)
+                })
+        })()
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>
